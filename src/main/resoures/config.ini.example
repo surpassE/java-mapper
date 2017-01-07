@@ -1,0 +1,9 @@
+[global]
+url = jdbc:mysql://127.0.0.1:8097/java_stu
+driver = com.mysql.jdbc.Driver
+user_name = develop
+pwd = yrSuper001
+run_sec = db_mysql
+
+[db_mysql]
+
