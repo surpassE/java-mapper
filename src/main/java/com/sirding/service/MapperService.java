@@ -24,8 +24,8 @@ public class MapperService {
 	
 	public MapperService(){
 		iniTool = IniTool.newInstance();
-//		path = System.getProperty("user.dir") + "/config.ini";
-		path = "C:/yrtz/test/java-mapper/config.ini";
+		path = System.getProperty("user.dir") + "/config.ini";
+//		path = "C:/yrtz/test/java-mapper/config.ini";
 		path = path.replaceAll("\\\\", "/");
 		try {
 			Config config = iniTool.loadSingleSec(Config.class, true, "global");

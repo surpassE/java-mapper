@@ -1,5 +1,5 @@
 [global]
-url = jdbc:mysql://127.0.0.1:8097/java_stu
+url = jdbc:mysql://127.0.0.1:8098/java_stu
 driver = com.mysql.jdbc.Driver
 user_name = develop
 pwd = yrSuper001

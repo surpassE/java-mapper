@@ -12,6 +12,10 @@ public class Config implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	public static String CONF_FILE_PATH = "C:/yrtz/test/java-mapper/config.ini";
+	static{
+		CONF_FILE_PATH = System.getProperty("user.dir") + "/config.ini";
+		CONF_FILE_PATH = CONF_FILE_PATH.replaceAll("\\\\", "/");
+	}
 	
 	@Option(isSection = true)
 	private String secName;
