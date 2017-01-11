@@ -12,7 +12,13 @@ public class Start {
 
 	public static void main(String[] args) {
 		MapperService mapper = new MapperService();
-		mapper.load("app_menu");
+		if(args.length == 0){
+			System.out.println("请输入表名，多个表名顺序追加");
+			return;
+		}
+		for(String tableName : args){
+			mapper.load(tableName);
+		}
 		System.out.println("操作完成.");
 	}
 }
