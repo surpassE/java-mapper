@@ -159,7 +159,11 @@ public class MapperService {
 	 */
 	private String getJavaType(String type){
 		type = type.toLowerCase();
-		type = type.substring(0, type.indexOf("("));
+		int index = type.length();
+		if(type.indexOf("(") > -1){
+			index = type.indexOf("(");
+		}
+		type = type.substring(0, index);
 		String resultType = map.get(type);
 		if(resultType != null && resultType.length() > 0){
 			if(resultType.indexOf(".") > -1){
