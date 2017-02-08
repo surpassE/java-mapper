@@ -128,7 +128,7 @@ public class MapperService {
 	public String getGetMethod(String field, String type){
 		String fieldName = DbUtil.dealFieldName(field);
 		StringBuffer sb = new StringBuffer(getTabs(1) + "public " + getJavaType(type) + " get" + DbUtil.toUpLetter(fieldName) + "() {").append("\n");
-		sb.append(getTabs(2) + "this." + fieldName + " = " + fieldName);
+		sb.append(getTabs(2) + "return this." + fieldName);
 		sb.append(SUFFIX);
 		return sb.toString();
 	}
@@ -145,7 +145,7 @@ public class MapperService {
 		String fieldName = DbUtil.dealFieldName(field);
 		StringBuffer sb = new StringBuffer(getTabs(1) + "public void set" + DbUtil.toUpLetter(fieldName));
 		sb.append("(" + getJavaType(type) + " " + fieldName + ") {\n");
-		sb.append(getTabs(2) + "return this." + fieldName);
+		sb.append(getTabs(2) + "this." + fieldName + " = " + fieldName);
 		sb.append(SUFFIX);
 		return sb.toString();
 	}
